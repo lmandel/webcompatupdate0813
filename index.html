@@ -1,0 +1,257 @@
+<!DOCTYPE HTML>
+<html lang="en-US" class="fade">
+<!-- 
+  ^ You can control a few things with the <html> element's classes:
+
+  "fade"      - smooth fade between slides
+  "nonumbers" - remove the slide numbering after the progress bar
+-->
+
+<head>
+  <title>Firefox Mobile Web Compatibility Update (08/2013)</title>
+  <!-- 
+    ^ Don't forget a good title - they show up as bookmarks and in Google 
+  -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1274, user-scalable=no">
+  <link rel="stylesheet" href="themes/mozilla/styles/style.css">
+  <style type="text/css">
+      .small {
+          font-size: 20px;
+      }
+      ul.inner li::before {
+          content:'\2022';
+      }
+      .inner li {
+          opacity: 0;
+      }
+      .spacer {
+          margin-top:50px;
+      }
+  </style>
+</head>
+<body class="list">
+
+  <header class="caption">
+    <h1>Firefox Mobile Web Compatibility Update (08/2013)</h1>
+    <p class="footer">Lawrence Mandel, <a href="http://twitter.com/mmandel">@mmmandel</a> or <a href="mailto:lmandel@mozilla.com">lmandel@mozilla.com</a></p>
+  </header>
+
+<!-- 
+  The following is a slide, it needs a class of "slide" and it doesn't 
+  hurt to keep the right semantic elements in there, too.
+  IMPORTANT: each slide needs its own unique ID - this will become its
+  URL and this is how this slide system works!
+-->
+
+  <div id="cover" class="slide cover"><div>
+    <section>
+      <header>
+        <h2>Firefox Mobile Web Compatibility Update</h2>
+      </header>
+      <div class="byline">
+        Lawrence Mandel, Mozilla, Aug 19, 2013
+      </div>
+    <footer class="notes">
+      <ul>
+        <li>I'm Lawrence Mandel</li>
+        <li>Updated on Firefox and Mobile Web Compatibility</li>
+        <li>First, some context</li>
+      </ul>
+    </footer>
+    </section>
+  </div></div>
+    
+  <div id="lovetheweb" class="slide bigidea"><div>
+    <section>
+      <h1>We <img src="pictures/2-red-heart.png" style="width:200px; transform:translate(0%, 50%);"/> the Web</h1>
+        <div class="byline">Image credit: <a href="http://www.feroniaproject.org/sweet-notes-to-leave-for-your-sweetie/2-red-heart/">Feronia Project</a>
+    </section>
+  </div></div>
+    
+  <div id="brokenweb" class="slide bigidea"><div>
+    <section>
+      <h1>But the mobile Web is broken<br/><img src="pictures/dawson-crying.jpg" style="width:500px;"/></h1>
+      
+    </section>
+  </div></div>
+    
+  <div id="firefoxbroken" class="slide bigidea"><div>
+    <section>
+      <h1>This results in a poor user experience in Firefox products</h1>
+      <div class="bigtext">:(</div>
+      <footer class="notes">
+        <ul>
+          <li>Directly impacts the Firefox product experience</li>
+          <li>Not something over which Mozilla has direct control</li>
+        </ul>
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="problemex1" class="slide"><div>
+    <section>
+      <header>
+        <h2>Desktop vs mobile content</h2>
+      </header>
+      <img src="pictures/imdb.png" class="middle"
+           alt="IMDB" width="53%">
+      <footer class="notes">
+        <ul>
+          <li>Poor expeience due to desktop vs mobile content</li>
+          <li>Content is hard to read</li>
+          <li>Content can be very difficult to interact with when features like hover over menus are in use</li>
+        </ul>
+      </footer>
+    </section>
+  </div></div>
+    
+  <div id="problemex2" class="slide"><div>
+    <section>
+      <header>
+        <h2>Basic HTML vs HTML5</h2>
+      </header>
+      <img src="pictures/google.png" class="middle"
+           alt="Google" width="55%">
+      <footer class="notes">
+        <ul>
+          <li>Poor expeience due to simplified mobile content</li>
+          <li>Typically static HTML - non interactive content</li>
+        </ul>
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="issues" class="slide"><div>
+    <section>
+      <header>
+        <h2>4 issues</h2>
+      </header>
+      <ol>
+        <li>User Agent (UA) detection</li>
+        <li>Vendor (Webkit) specific CSS</li>
+        <li>Functional DOM/JS issues</li>
+        <li>Gecko limitations</li>
+      </ol>
+      <br/>
+      <br/>
+        <div>Learn more about the issues from my <a href="https://air.mozilla.org/the-monday-meeting-20121022/">Oct 2012 video update</a> (4:00)</div>
+      <footer class="notes">
+        <ul>
+          <li>UA detection - not recognizing Firefox as mobile or not recognizing it as feature capable mobile</li>
+          <li>CSS - properties that Gecko doesn't understand - includes functional issues</li>
+          <li>DOM/JS - vendor specific implementations or quirks</li>
+          <li>Gecko - limitations in our own platform</li>
+        </ul>
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="scope" class="slide"><div>
+    <section>
+      <header>
+        <h2>Problem scope</h2>
+      </header>
+      <div>Alexa global 1000 sites that have a mobile version (May 2013)</div>
+      <img src="pictures/mobilewebstats2.png" class="middle" style="transform:translate(-50%, -35%);"/>
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="strategy" class="slide"><div>
+    <section>
+      <header>
+        <h2>Our strategy</h2>
+      </header>
+        <img src="pictures/workcircles.png" class="middle" width="45%"
+            alt="MoCo core team and Mozilla local communities"/>
+      <footer class="notes">
+        <ul>
+          <li>Small team of MoCo employees, <i>who</i></li>
+          <li>Create materal and tools to support the Mozilla community, <i>which</i></li>
+          <li>Allows many people to contribute, <i>because</i></li>
+          <li>We can't do this alone!</li>
+        </ul>
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="material" class="slide"><div>
+    <section>
+      <header>
+        <h2>Materials and tools</h2>
+      </header>
+      <ul>
+        <li><a href="https://wiki.mozilla.org/Compatibility/Guide">Introductory guide</a></li>
+        <li><a href="https://wiki.mozilla.org/Compatibility/StdLetters">Standard letters</a> - available in 14 languages</li>
+        <li><a href="https://bugzilla.mozilla.org/form.mobile.compat">Bugzilla form</a> for simplified problem submission</li>
+        <li>Community specific langing pages
+          <ul>
+            <li><a href="https://wiki.mozilla.org/Compatibility/Mobile/Spain">Spain</a></li>
+            <li><a href="https://wiki.mozilla.org/Compatibility/Mobile/Poland">Poland</a></li>
+            <li>Venezuela and Colombia coming soon</li>
+          </ul>
+      </ul>
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>
+
+
+  <div id="success" class="slide"><div>
+    <section>
+      <header>
+        <h2>Recent success (since July 1)</h2>
+      </header>
+      <ul>
+        <li>Removed 34 UA overrides (145 remain on the list)</li>
+        <li>Resolved 15 additional evangelism bugs</li>
+      </ul>
+      <ul>
+        <li>Notable recent fixes include:
+          <ul class="inline pics">
+            <li><img src="pictures/amazon.png" style="width:100px; transform:translate(0%, 30%);"/></li>
+            <li><img src="pictures/tumblr.png" width="100px"/></li>
+            <li><img src="pictures/flickr.png" width="100px"/></li>
+            <li><img src="pictures/etsy.png" style="width:100px; transform:translate(0%, 30%);"/></li>
+            <li><img src="pictures/arstechnica.png" style="width:100px; transform:translate(0%, 20%);"/></li>
+            <li><img src="pictures/googleaccount.jpg" width="100px"/></li>
+            <li><img src="pictures/imdblogo.png" width="100px"/></li>
+            <li><img src="pictures/vimeo.png" width="100px"/></li>
+            <li><img src="pictures/espn.png" style="width:100px; transform:translate(0%, -100%);"/></li>
+          </ul>
+        </li>
+      </ul>
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="calltoaction" class="slide"><div>
+    <section>
+      <header>
+        <h2>Call to action</h2>
+      </header>
+      <div>We need the help of the global Mozilla community</div>
+      <br/>
+      <ul>
+        <li>Start with the guide</li>
+        <li>Test and report issues</li>
+        <li>Contact your country specific sites</li>
+        <li>Talk to us via <a href="https://lists.mozilla.org/listinfo/compatibility">compatibility@lists.mozilla.org</a></li>
+      </ul>
+      <div>Need more help getting started? Talk to us on the compatibility@ list or contact <a href="mailto:kdubost@mozilla.com">Karl Dubost</a> or <a href="mailto:lmandel@mozilla.com">Lawrence Mandel</a> directly</div>
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>
+    
+  <div class="progress"><div></div></div>
+  <!-- 
+    ^ don't like a progress bar? just delete this DIV
+  -->
+  <script src="scripts/script.js"></script>
+  <!-- Copyright © 2010–2012 Vadim Makeev — pepelsbey.net -->
+</body>
+</html>
